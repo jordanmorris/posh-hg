@@ -12,7 +12,8 @@ function HgTabExpansion($lastBlock) {
     
    #handles hg update <branch name>
    #handles hg merge <branch name>
-   'hg (up|update|merge|co|checkout) (\S*)$' {
+   #handles hg review <branch name>
+   'hg (up|update|merge|co|checkout|review) (\S*)$' {
       findBranchOrBookmarkOrTags($matches[2])
    }
        
